@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/authFragment">
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.ariefrahmanfajri.dataprocessapp.presentation.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_sellerHomeFragment"
+            app:destination="@id/sellerHomeFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerHomeFragment"
+        android:name="com.ariefrahmanfajri.dataprocessapp.presentation.SellerHomeFragment"
+        android:label="fragment_seller_home"
+        tools:layout="@layout/fragment_seller_home" >
+        <action
+            android:id="@+id/action_sellerHomeFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_sellerHomeFragment_to_sellerProductStockFragment"
+            app:destination="@id/sellerProductStockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.ariefrahmanfajri.dataprocessapp.presentation.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ariefrahmanfajri.dataprocessapp.presentation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.ariefrahmanfajri.dataprocessapp.presentation.DetailProductFragment"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" >
+        <argument
+            android:name="product"
+            app:argType="com.ariefrahmanfajri.dataprocessapp.domain.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerProductStockFragment"
+        android:name="com.ariefrahmanfajri.dataprocessapp.presentation.SellerProductStockFragment"
+        android:label="fragment_seller_product_stock"
+        tools:layout="@layout/fragment_seller_product_stock" />
+</navigation>

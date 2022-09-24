@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ApiCallingApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="gender">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+    <string-array name="status">
+        <item>active</item>
+        <item>inactive</item>
+    </string-array>
+</resources>
